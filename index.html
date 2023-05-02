@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>My Docs</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">My Docs</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#c-notes" class="nav-link">C# notes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#start-a-new-project" class="nav-link">Start a new project</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#printing-to-console" class="nav-link">Printing to console</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lists" class="nav-link">Lists</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#arrays" class="nav-link">Arrays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dictionary" class="nav-link">Dictionary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#for-loop" class="nav-link">For loop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#while-loop" class="nav-link">While loop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#do-while-loop" class="nav-link">Do while loop</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#reference-vs-value-types" class="nav-link">Reference vs Value Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#null-coalescing" class="nav-link">Null coalescing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#constants-vs-readonly" class="nav-link">Constants vs readonly</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#files" class="nav-link">Files</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="c-notes">C# notes</h1>
+<h2 id="start-a-new-project">Start a new project</h2>
+<ol>
+<li>open up visual studio</li>
+<li>create a newproject and then name it</li>
+</ol>
+<h2 id="printing-to-console">Printing to console</h2>
+<pre><code class="language-C#">Console.WriteLine(&quot;hello world&quot;);
+</code></pre>
+<pre><code class="language-C#">// To read a key input
+string input = Console.ReadLine();
+</code></pre>
+<h2 id="lists">Lists</h2>
+<pre><code class="language-C#">List&lt;int&gt; myList = new List&lt;int&gt;;
+var myOtherList = new List&lt;int&gt;;
+
+myList.Add(1);
+</code></pre>
+<pre><code class="language-C#">List&lt;int&gt; myList2 = new List&lt;int&gt; {1, 2, 5};
+foreach (int i in myList2)
+{
+    Console.WriteLine(i);
+}
+</code></pre>
+<h2 id="arrays">Arrays</h2>
+<pre><code class="language-C#">int[] myArray = new int[10]; // 10 is the size of the array
+myArray[0] = 3;
+
+int[] myOtherArray = {1, 2, 10, 7, 6}
+Array.Sort(myOtherArray) // does it in place no need to assign
+</code></pre>
+<h2 id="dictionary">Dictionary</h2>
+<pre><code class="language-C#">Dictionary&lt;string, int&gt; scores = new Dictionary&lt;String, int&gt;();
+scores.Add(&quot;Ish&quot;, 90);
+scores.Add(&quot;Jane&quot;, 95);
+scores.Add(&quot;Bob&quot;, 85);
+
+foreach (var pair in scores)
+{
+    Console.WriteLine(&quot;{0} {1}&quot;, pair.Key, pair.Value);
+}
+
+</code></pre>
+<h2 id="for-loop">For loop</h2>
+<pre><code class="language-C#">for(int i = 0, i &lt;= 5, i++)
+{
+    Console.WriteLine(int);
+}
+</code></pre>
+<h2 id="while-loop">While loop</h2>
+<p>Not guaranteed to run atleast once like <code>do while</code></p>
+<pre><code class="language-C#">int i = 0;
+while(i &lt;= 5)
+{
+    Console.Writeline(i);
+    i += 1;
+}
+</code></pre>
+<h2 id="do-while-loop">Do while loop</h2>
+<p>guaranteed to run the first loop</p>
+<pre><code class="language-C#">int i = 0;
+
+do
+{
+    Console.WriteLine(i);
+} while ( i &lt; 5);
+
+</code></pre>
+<h2 id="reference-vs-value-types">Reference vs Value Types</h2>
+<pre><code class="language-C#">static void addOne(ref int num)
+{
+    Console.WriteLine($&quot;value inside addOne {num}&quot;);
+}
+
+static void Main(string[] args)
+{
+    int num = 0;
+    addOne(ref num);
+    Console.WriteLine($&quot;original value: {num}&quot;);
+}
+</code></pre>
+<h2 id="null-coalescing">Null coalescing</h2>
+<pre><code class="language-C#">var a = variable ?? defaultVariable
+</code></pre>
+<pre><code class="language-C#">Person person = null;
+Person newPerson = person ?? new Person(&quot;Default&quot;, &quot;Person&quot;);
+
+Console.WriteLine(Person.FirstName);
+</code></pre>
+<h2 id="constants-vs-readonly">Constants vs readonly</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Constants</th>
+<th align="left">Readonly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Implicit static</td>
+<td align="left">Not implicit static</td>
+</tr>
+<tr>
+<td align="left">Constant must be initialised</td>
+<td align="left">Does not need to be initialised</td>
+</tr>
+<tr>
+<td align="left">Cannot hold custom types</td>
+<td align="left">Can hold custom types</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-C#">class Program
+{
+    public const string someText = &quot;This is text&quot;;
+    public static readonly string someOtherText = &quot;Other text&quot;;
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine(someText);
+    }
+}
+</code></pre>
+<h2 id="files">Files</h2>
+<h3 id="write-files">write files</h3>
+<pre><code class="language-C#">string[] lines = {&quot;first line&quot;, &quot;second line&quot;, &quot;third line&quot;};
+File.WriteAllLines(&quot;myFirstFile.txt&quot;, lines);
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-05-02 03:17:32.855461+00:00
+-->
