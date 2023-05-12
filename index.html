@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
+        <title>Csharp Notes</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
@@ -23,10 +23,26 @@
     <body class="homepage">
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">My Docs</a>
+                <a class="navbar-brand" href=".">Csharp Notes</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem active">
+                                <a href="." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="dot-net/" class="nav-link">Dot-Net</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="access-modifiers/" class="nav-link">Access-Modifiers</a>
+                            </li>
+                        </ul>
 
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">
@@ -34,6 +50,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="dot-net/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -151,6 +177,16 @@ foreach (var pair in scores)
     Console.WriteLine(&quot;{0} {1}&quot;, pair.Key, pair.Value);
 }
 
+</code></pre>
+<pre><code class="language-C#">Dictionary&lt;string, int&gt; scores = new Dictionary&lt;string, int&gt;();
+scores.Add(&quot;John&quot;, 90);
+scores.Add(&quot;Jane&quot;, 95);
+scores.Add(&quot;Bob&quot;, 80);
+
+foreach (KeyValuePair&lt;string, int&gt; pair in scores)
+{
+    Console.WriteLine(&quot;{0}: {1}&quot;, pair.Key, pair.Value);
+}
 </code></pre>
 <h2 id="for-loop">For loop</h2>
 <pre><code class="language-C#">for(int i = 0, i &lt;= 5, i++)
@@ -317,5 +353,5 @@ File.WriteAllLines(&quot;myFirstFile.txt&quot;, lines);
 
 <!--
 MkDocs version : 1.4.2
-Build Date UTC : 2023-05-02 03:17:32.855461+00:00
+Build Date UTC : 2023-05-12 12:25:05.540514+00:00
 -->

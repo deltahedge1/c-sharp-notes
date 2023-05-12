@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>Csharp Notes</title>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Dot-Net - Csharp Notes</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="/js/jquery-1.10.2.min.js" defer></script>
-        <script src="/js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/.">Csharp Notes</a>
+                <a class="navbar-brand" href="..">Csharp Notes</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,13 +34,13 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="/." class="nav-link">Home</a>
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Dot-Net</a>
                             </li>
                             <li class="navitem">
-                                <a href="/dot-net/" class="nav-link">Dot-Net</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="/access-modifiers/" class="nav-link">Access-Modifiers</a>
+                                <a href="../access-modifiers/" class="nav-link">Access-Modifiers</a>
                             </li>
                         </ul>
 
@@ -50,6 +50,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../access-modifiers/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -57,15 +67,89 @@
 
         <div class="container">
             <div class="row">
-
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
     </div>
 
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#net-cli" class="nav-link">.NET CLI</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#list-net-sdks" class="nav-link">List .Net SDKs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#run-the-app" class="nav-link">Run the app</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#installing-packages" class="nav-link">Installing packages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#dotnet-cli" class="nav-link">DotNet CLI</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#under-construction" class="nav-link">Under construction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
 
+<h1 id="net-cli">.NET CLI</h1>
+<p><a href="https://learn.microsoft.com/en-us/training/modules/dotnet-dependencies/3-exercise-dependency">tutorial</a></p>
+<h2 id="list-net-sdks">List .Net SDKs</h2>
+<p>```.NET CLI
+dotnet --list-sdks</p>
+<pre><code>
+## Creating a new console app
+```.NET CLI
+dotnet new console -h #help 
+dotnet new console -n myProj2 -f net6.0
+</code></pre>
+<h2 id="run-the-app">Run the app</h2>
+<p>```.NET CLI
+dotnet run</p>
+<pre><code>
+## Where are packages listed
+```.NET CLI
+dotnet list packages
+</code></pre>
+<h2 id="installing-packages">Installing packages</h2>
+<p>```.NET CLI
+dotnet add package <package_name> --version <version></p>
+<pre><code>
+```.NET CLI
+dotnet add package Humanizer --version 2.7.9
+</code></pre>
+<p>```.NET CLI
+dotnet add package Humanizer --prerelease</p>
+<pre><code>
+## List packages
+
+```.NET CLI
+dotnet list package
+</code></pre>
+<p>```.NET CLI
+dotnet list package --outdated</p>
+<pre><code>
+```.NET CLI
+dotnet list package --outdated --include-prerelease
+</code></pre>
+<h1 id="dotnet-cli">DotNet CLI</h1>
+<h2 id="under-construction">Under construction</h2></div>
             </div>
         </div>
 
@@ -74,11 +158,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "/",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js" defer></script>
-        <script src="/search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
