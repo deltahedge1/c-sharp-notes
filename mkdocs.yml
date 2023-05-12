@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: Csharp Notes
+nav:
+  - Home: index.md
+  - Dot-Net: dot-net.md
+  - Access-Modifiers: access-modifiers.md

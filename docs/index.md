@@ -55,6 +55,18 @@ foreach (var pair in scores)
 }
 
 ```
+
+```C#
+Dictionary<string, int> scores = new Dictionary<string, int>();
+scores.Add("John", 90);
+scores.Add("Jane", 95);
+scores.Add("Bob", 80);
+
+foreach (KeyValuePair<string, int> pair in scores)
+{
+    Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+}
+```
 ## For loop
 
 ```C#
