@@ -13,7 +13,7 @@
     
     
       
-        <title>Access-Modifiers - C# Notes</title>
+        <title>Files - C# Notes</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#access-modifiers" class="md-skip">
+        <a href="#files-in-c" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Access-Modifiers
+              Files
             
           </span>
         </div>
@@ -198,6 +198,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../access-modifiers/" class="md-nav__link">
+        Access-Modifiers
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -210,12 +225,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Access-Modifiers
+          Files
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Access-Modifiers
+        Files
       </a>
       
         
@@ -234,15 +249,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-modifers-work" class="md-nav__link">
-    How Modifers Work
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-code" class="md-nav__link">
-    Example Code
+  <a href="#write-files" class="md-nav__link">
+    Write Files
   </a>
   
 </li>
@@ -251,21 +259,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../files/" class="md-nav__link">
-        Files
-      </a>
     </li>
   
 
@@ -312,15 +305,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-modifers-work" class="md-nav__link">
-    How Modifers Work
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-code" class="md-nav__link">
-    Example Code
+  <a href="#write-files" class="md-nav__link">
+    Write Files
   </a>
   
 </li>
@@ -340,109 +326,10 @@
                   
 
 
-<h1 id="access-modifiers">Access Modifiers</h1>
-<h2 id="how-modifers-work">How Modifers Work</h2>
-<table>
-<thead>
-<tr>
-<th>Access Modifier</th>
-<th>Visibility</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>public</code></td>
-<td>The type or member can be accessed from anywhere.</td>
-</tr>
-<tr>
-<td><code>private</code></td>
-<td>The type or member can only be accessed from within the same class.</td>
-</tr>
-<tr>
-<td><code>internal</code></td>
-<td>The type or member can only be accessed from within the same assembly.</td>
-</tr>
-<tr>
-<td><code>protected</code></td>
-<td>The type or member can only be accessed from within the same class or a derived class.</td>
-</tr>
-<tr>
-<td><code>protected internal</code></td>
-<td>The type or member can only be accessed from within the same assembly or a derived class in another assembly.</td>
-</tr>
-<tr>
-<td><code>private protected</code></td>
-<td>The type or member can only be accessed from within the same assembly and from any derived class in the same assembly.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="example-code">Example Code</h2>
-<pre><code class="language-C#">// This is a public class that can be accessed from anywhere.
-public class PublicClass
-{
-    // This is a public field that can be accessed from anywhere.
-    public int PublicField;
-
-    // This is a public method that can be accessed from anywhere.
-    public void PublicMethod()
-    {
-        // Implementation code goes here.
-    }
-
-    // This is a private method that can only be accessed from within this class.
-    private void PrivateMethod()
-    {
-        // Implementation code goes here.
-    }
-
-    // This is an internal method that can only be accessed from within this assembly.
-    internal void InternalMethod()
-    {
-        // Implementation code goes here.
-    }
-
-    // This is a protected method that can only be accessed from within this class or a derived class.
-    protected void ProtectedMethod()
-    {
-        // Implementation code goes here.
-    }
-
-    // This is a protected internal method that can be accessed from within this assembly or a derived class in another assembly.
-    protected internal void ProtectedInternalMethod()
-    {
-        // Implementation code goes here.
-    }
-
-    // This is a private protected method that can only be accessed from within this assembly and from any derived class in the same assembly.
-    private protected void PrivateProtectedMethod()
-    {
-        // Implementation code goes here.
-    }
-}
-
-// This is a class that derives from PublicClass and can access its protected and protected internal members.
-public class DerivedClass : PublicClass
-{
-    public void AccessProtectedMembers()
-    {
-        ProtectedMethod();
-        ProtectedInternalMethod();
-    }
-}
-
-// This is a class in a different assembly that can only access PublicClass's public and protected internal members.
-public class ExternalClass
-{
-    public void AccessPublicMembers(PublicClass obj)
-    {
-        obj.PublicField = 42;
-        obj.PublicMethod();
-        obj.ProtectedInternalMethod(); // This is allowed because it's protected internal.
-        // obj.PrivateMethod(); // This is not allowed because it's private.
-        // obj.InternalMethod(); // This is not allowed because it's internal.
-        // obj.PrivateProtectedMethod(); // This is not allowed because it's private protected.
-    }
-}
+<h1 id="files-in-c">Files in C</h1>
+<h2 id="write-files">Write Files</h2>
+<pre><code class="language-C#">string[] lines = {&quot;first line&quot;, &quot;second line&quot;, &quot;third line&quot;};
+File.WriteAllLines(&quot;myFirstFile.txt&quot;, lines);
 </code></pre>
 
 
@@ -464,7 +351,7 @@ public class ExternalClass
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+        <a href="../access-modifiers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Access-Modifiers" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -473,20 +360,20 @@ public class ExternalClass
               <span class="md-footer__direction">
                 Previous
               </span>
-              Home
+              Access-Modifiers
             </div>
           </div>
         </a>
       
       
         
-        <a href="../files/" class="md-footer__link md-footer__link--next" aria-label="Next: Files" rel="next">
+        <a href="../dot-net/" class="md-footer__link md-footer__link--next" aria-label="Next: .Net CLI" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Files
+              .Net CLI
             </div>
           </div>
           <div class="md-footer__button md-icon">
