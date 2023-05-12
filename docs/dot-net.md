@@ -1,54 +1,51 @@
-# .NET CLI
+# .Net CLI
 
 [tutorial](https://learn.microsoft.com/en-us/training/modules/dotnet-dependencies/3-exercise-dependency)
 
 
 ## List .Net SDKs
-```.NET CLI
+```terminal
 dotnet --list-sdks
 ```
 
 ## Creating a new console app
-```.NET CLI
+```terminal
 dotnet new console -h #help 
 dotnet new console -n myProj2 -f net6.0
 ```
 
 ## Run the app 
-```.NET CLI
+```terminal
 dotnet run
 ```
 
 ## Where are packages listed
-```.NET CLI
+```terminal
 dotnet list packages
 ```
 ## Installing packages
-```.NET CLI
+```terminal
 dotnet add package <package_name> --version <version>
 ```
 
-```.NET CLI
+```terminal
 dotnet add package Humanizer --version 2.7.9
 ```
 
-```.NET CLI
+```terminal
 dotnet add package Humanizer --prerelease
 ```
 
 ## List packages
 
-```.NET CLI
+```terminal
 dotnet list package
 ```
 
-```.NET CLI
+```terminal
 dotnet list package --outdated
 ```
 
-```.NET CLI
+```terminal
 dotnet list package --outdated --include-prerelease
 ```
-# DotNet CLI
-
-## Under construction

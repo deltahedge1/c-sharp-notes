@@ -1,4 +1,6 @@
-## Access Modifiers
+# Access Modifiers
+
+## How Modifers Work
 
 | Access Modifier | Visibility |
 | --- | --- |
@@ -9,6 +11,7 @@
 | `protected internal` | The type or member can only be accessed from within the same assembly or a derived class in another assembly. |
 | `private protected` | The type or member can only be accessed from within the same assembly and from any derived class in the same assembly. |
 
+## Example Code
 
 ```C#
 // This is a public class that can be accessed from anywhere.

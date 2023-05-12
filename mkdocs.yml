@@ -1,5 +1,14 @@
-site_name: Csharp Notes
+site_name: C# Notes
 nav:
   - Home: index.md
-  - Dot-Net: dot-net.md
   - Access-Modifiers: access-modifiers.md
+  - Files: files.md
+  - .Net CLI: dot-net.md
+theme:
+  name: material
+  palette:
+    primary: "purple"
+    accent: "orange"
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
