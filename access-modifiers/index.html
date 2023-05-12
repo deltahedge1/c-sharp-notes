@@ -392,73 +392,73 @@
 </tbody>
 </table>
 <h2 id="example-code">Example Code</h2>
-<pre><code class="language-C#">// This is a public class that can be accessed from anywhere.
-public class PublicClass
-{
-    // This is a public field that can be accessed from anywhere.
-    public int PublicField;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008800; font-style: italic">// This is a public class that can be accessed from anywhere.</span>
+<span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">PublicClass</span><span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// This is a public field that can be accessed from anywhere.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>PublicField;<span style="color: #bbbbbb"></span>
 
-    // This is a public method that can be accessed from anywhere.
-    public void PublicMethod()
-    {
-        // Implementation code goes here.
-    }
+<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// This is a public method that can be accessed from anywhere.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">PublicMethod</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Implementation code goes here.</span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
 
-    // This is a private method that can only be accessed from within this class.
-    private void PrivateMethod()
-    {
-        // Implementation code goes here.
-    }
+<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// This is a private method that can only be accessed from within this class.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">PrivateMethod</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Implementation code goes here.</span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
 
-    // This is an internal method that can only be accessed from within this assembly.
-    internal void InternalMethod()
-    {
-        // Implementation code goes here.
-    }
+<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// This is an internal method that can only be accessed from within this assembly.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">internal</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">InternalMethod</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Implementation code goes here.</span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
 
-    // This is a protected method that can only be accessed from within this class or a derived class.
-    protected void ProtectedMethod()
-    {
-        // Implementation code goes here.
-    }
+<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// This is a protected method that can only be accessed from within this class or a derived class.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">protected</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">ProtectedMethod</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Implementation code goes here.</span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
 
-    // This is a protected internal method that can be accessed from within this assembly or a derived class in another assembly.
-    protected internal void ProtectedInternalMethod()
-    {
-        // Implementation code goes here.
-    }
+<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// This is a protected internal method that can be accessed from within this assembly or a derived class in another assembly.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">protected</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">internal</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">ProtectedInternalMethod</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Implementation code goes here.</span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
 
-    // This is a private protected method that can only be accessed from within this assembly and from any derived class in the same assembly.
-    private protected void PrivateProtectedMethod()
-    {
-        // Implementation code goes here.
-    }
-}
+<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// This is a private protected method that can only be accessed from within this assembly and from any derived class in the same assembly.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">protected</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">PrivateProtectedMethod</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Implementation code goes here.</span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
 
-// This is a class that derives from PublicClass and can access its protected and protected internal members.
-public class DerivedClass : PublicClass
-{
-    public void AccessProtectedMembers()
-    {
-        ProtectedMethod();
-        ProtectedInternalMethod();
-    }
-}
+<span style="color: #008800; font-style: italic">// This is a class that derives from PublicClass and can access its protected and protected internal members.</span>
+<span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">DerivedClass</span><span style="color: #bbbbbb"> </span>:<span style="color: #bbbbbb"> </span>PublicClass<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">AccessProtectedMembers</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>ProtectedMethod();<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>ProtectedInternalMethod();<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
 
-// This is a class in a different assembly that can only access PublicClass's public and protected internal members.
-public class ExternalClass
-{
-    public void AccessPublicMembers(PublicClass obj)
-    {
-        obj.PublicField = 42;
-        obj.PublicMethod();
-        obj.ProtectedInternalMethod(); // This is allowed because it's protected internal.
-        // obj.PrivateMethod(); // This is not allowed because it's private.
-        // obj.InternalMethod(); // This is not allowed because it's internal.
-        // obj.PrivateProtectedMethod(); // This is not allowed because it's private protected.
-    }
-}
-</code></pre>
+<span style="color: #008800; font-style: italic">// This is a class in a different assembly that can only access PublicClass&#39;s public and protected internal members.</span>
+<span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">ExternalClass</span><span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">AccessPublicMembers</span>(PublicClass<span style="color: #bbbbbb"> </span>obj)<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>obj.PublicField<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">42</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>obj.PublicMethod();<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>obj.ProtectedInternalMethod();<span style="color: #bbbbbb"> </span><span style="color: #008800; font-style: italic">// This is allowed because it&#39;s protected internal.</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// obj.PrivateMethod(); // This is not allowed because it&#39;s private.</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// obj.InternalMethod(); // This is not allowed because it&#39;s internal.</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// obj.PrivateProtectedMethod(); // This is not allowed because it&#39;s private protected.</span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
 
 
 

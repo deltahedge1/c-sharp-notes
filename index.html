@@ -488,98 +488,109 @@
 <li>create a newproject and then name it</li>
 </ol>
 <h2 id="printing-to-console">Printing to console</h2>
-<pre><code class="language-C#">Console.WriteLine(&quot;hello world&quot;);
-</code></pre>
-<pre><code class="language-C#">// To read a key input
-string input = Console.ReadLine();
-</code></pre>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Console.WriteLine(<span style="color: #BB4444">&quot;hello world&quot;</span>);<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008800; font-style: italic">// To read a key input</span>
+<span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span>input<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>Console.ReadLine();<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
 <h2 id="lists">Lists</h2>
-<pre><code class="language-C#">List&lt;int&gt; myList = new List&lt;int&gt;;
-var myOtherList = new List&lt;int&gt;;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>List&lt;<span style="color: #00BB00; font-weight: bold">int</span>&gt;<span style="color: #bbbbbb"> </span>myList<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>List&lt;<span style="color: #00BB00; font-weight: bold">int</span>&gt;;<span style="color: #bbbbbb"></span>
+<span style="color: #00BB00; font-weight: bold">var</span><span style="color: #bbbbbb"> </span>myOtherList<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>List&lt;<span style="color: #00BB00; font-weight: bold">int</span>&gt;;<span style="color: #bbbbbb"></span>
 
-myList.Add(1);
-</code></pre>
-<pre><code class="language-C#">List&lt;int&gt; myList2 = new List&lt;int&gt; {1, 2, 5};
-foreach (int i in myList2)
-{
-    Console.WriteLine(i);
-}
-</code></pre>
+myList.Add(<span style="color: #666666">1</span>);<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>List&lt;<span style="color: #00BB00; font-weight: bold">int</span>&gt;<span style="color: #bbbbbb"> </span>myList2<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>List&lt;<span style="color: #00BB00; font-weight: bold">int</span>&gt;<span style="color: #bbbbbb"> </span>{<span style="color: #666666">1</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">2</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">5</span>};<span style="color: #bbbbbb"></span>
+<span style="color: #AA22FF; font-weight: bold">foreach</span><span style="color: #bbbbbb"> </span>(<span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>myList2)<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.WriteLine(i);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
 <h2 id="arrays">Arrays</h2>
-<pre><code class="language-C#">int[] myArray = new int[10]; // 10 is the size of the array
-myArray[0] = 3;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #00BB00; font-weight: bold">int</span>[]<span style="color: #bbbbbb"> </span>myArray<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>[<span style="color: #666666">10</span>];<span style="color: #bbbbbb"> </span><span style="color: #008800; font-style: italic">// 10 is the size of the array</span>
+myArray[<span style="color: #666666">0</span>]<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>;<span style="color: #bbbbbb"></span>
 
-int[] myOtherArray = {1, 2, 10, 7, 6}
-Array.Sort(myOtherArray) // does it in place no need to assign
-</code></pre>
+<span style="color: #00BB00; font-weight: bold">int</span>[]<span style="color: #bbbbbb"> </span>myOtherArray<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>{<span style="color: #666666">1</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">2</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">10</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">7</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">6</span>}<span style="color: #bbbbbb"></span>
+Array.Sort(myOtherArray)<span style="color: #bbbbbb"> </span><span style="color: #008800; font-style: italic">// does it in place no need to assign</span>
+</code></pre></div>
+
 <h2 id="dictionary">Dictionary</h2>
-<pre><code class="language-C#">Dictionary&lt;string, int&gt; scores = new Dictionary&lt;String, int&gt;();
-scores.Add(&quot;Ish&quot;, 90);
-scores.Add(&quot;Jane&quot;, 95);
-scores.Add(&quot;Bob&quot;, 85);
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Dictionary&lt;<span style="color: #00BB00; font-weight: bold">string</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;<span style="color: #bbbbbb"> </span>scores<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>Dictionary&lt;String,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;();<span style="color: #bbbbbb"></span>
+scores.Add(<span style="color: #BB4444">&quot;Ish&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">90</span>);<span style="color: #bbbbbb"></span>
+scores.Add(<span style="color: #BB4444">&quot;Jane&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">95</span>);<span style="color: #bbbbbb"></span>
+scores.Add(<span style="color: #BB4444">&quot;Bob&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">85</span>);<span style="color: #bbbbbb"></span>
 
-foreach (var pair in scores)
-{
-    Console.WriteLine(&quot;{0} {1}&quot;, pair.Key, pair.Value);
-}
+<span style="color: #AA22FF; font-weight: bold">foreach</span><span style="color: #bbbbbb"> </span>(<span style="color: #00BB00; font-weight: bold">var</span><span style="color: #bbbbbb"> </span>pair<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>scores)<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.WriteLine(<span style="color: #BB4444">&quot;{0} {1}&quot;</span>,<span style="color: #bbbbbb"> </span>pair.Key,<span style="color: #bbbbbb"> </span>pair.Value);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
 
-</code></pre>
-<pre><code class="language-C#">Dictionary&lt;string, int&gt; scores = new Dictionary&lt;string, int&gt;();
-scores.Add(&quot;John&quot;, 90);
-scores.Add(&quot;Jane&quot;, 95);
-scores.Add(&quot;Bob&quot;, 80);
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Dictionary&lt;<span style="color: #00BB00; font-weight: bold">string</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;<span style="color: #bbbbbb"> </span>scores<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>Dictionary&lt;<span style="color: #00BB00; font-weight: bold">string</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;();<span style="color: #bbbbbb"></span>
+scores.Add(<span style="color: #BB4444">&quot;John&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">90</span>);<span style="color: #bbbbbb"></span>
+scores.Add(<span style="color: #BB4444">&quot;Jane&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">95</span>);<span style="color: #bbbbbb"></span>
+scores.Add(<span style="color: #BB4444">&quot;Bob&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">80</span>);<span style="color: #bbbbbb"></span>
 
-foreach (KeyValuePair&lt;string, int&gt; pair in scores)
-{
-    Console.WriteLine(&quot;{0}: {1}&quot;, pair.Key, pair.Value);
-}
-</code></pre>
+<span style="color: #AA22FF; font-weight: bold">foreach</span><span style="color: #bbbbbb"> </span>(KeyValuePair&lt;<span style="color: #00BB00; font-weight: bold">string</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;<span style="color: #bbbbbb"> </span>pair<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>scores)<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.WriteLine(<span style="color: #BB4444">&quot;{0}: {1}&quot;</span>,<span style="color: #bbbbbb"> </span>pair.Key,<span style="color: #bbbbbb"> </span>pair.Value);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
 <h2 id="for-loop">For loop</h2>
-<pre><code class="language-C#">for(int i = 0, i &lt;= 5, i++)
-{
-    Console.WriteLine(int);
-}
-</code></pre>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">for</span>(<span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>,<span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb"> </span>&lt;=<span style="color: #bbbbbb"> </span><span style="color: #666666">5</span>,<span style="color: #bbbbbb"> </span>i++)<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.WriteLine(<span style="color: #00BB00; font-weight: bold">int</span>);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
 <h2 id="while-loop">While loop</h2>
 <p>Not guaranteed to run atleast once like <code>do while</code></p>
-<pre><code class="language-C#">int i = 0;
-while(i &lt;= 5)
-{
-    Console.Writeline(i);
-    i += 1;
-}
-</code></pre>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #AA22FF; font-weight: bold">while</span>(i<span style="color: #bbbbbb"> </span>&lt;=<span style="color: #bbbbbb"> </span><span style="color: #666666">5</span>)<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.Writeline(i);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>i<span style="color: #bbbbbb"> </span>+=<span style="color: #bbbbbb"> </span><span style="color: #666666">1</span>;<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
 <h2 id="do-while-loop">Do while loop</h2>
 <p>guaranteed to run the first loop</p>
-<pre><code class="language-C#">int i = 0;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
 
-do
-{
-    Console.WriteLine(i);
-} while ( i &lt; 5);
+<span style="color: #AA22FF; font-weight: bold">do</span><span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.WriteLine(i);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(<span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb"> </span>&lt;<span style="color: #bbbbbb"> </span><span style="color: #666666">5</span>);<span style="color: #bbbbbb"></span>
+</code></pre></div>
 
-</code></pre>
 <h2 id="reference-vs-value-types">Reference vs Value Types</h2>
-<pre><code class="language-C#">static void addOne(ref int num)
-{
-    Console.WriteLine($&quot;value inside addOne {num}&quot;);
-}
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">static</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">addOne</span>(<span style="color: #AA22FF; font-weight: bold">ref</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>num)<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.WriteLine(<span style="color: #BB4444">$&quot;value inside addOne {num}&quot;</span>);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
 
-static void Main(string[] args)
-{
-    int num = 0;
-    addOne(ref num);
-    Console.WriteLine($&quot;original value: {num}&quot;);
-}
-</code></pre>
+<span style="color: #AA22FF; font-weight: bold">static</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">Main</span>(<span style="color: #00BB00; font-weight: bold">string</span>[]<span style="color: #bbbbbb"> </span>args)<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>num<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>addOne(<span style="color: #AA22FF; font-weight: bold">ref</span><span style="color: #bbbbbb"> </span>num);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.WriteLine(<span style="color: #BB4444">$&quot;original value: {num}&quot;</span>);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
 <h2 id="null-coalescing">Null coalescing</h2>
-<pre><code class="language-C#">var a = variable ?? defaultVariable
-</code></pre>
-<pre><code class="language-C#">Person person = null;
-Person newPerson = person ?? new Person(&quot;Default&quot;, &quot;Person&quot;);
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #00BB00; font-weight: bold">var</span><span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>variable<span style="color: #bbbbbb"> </span>??<span style="color: #bbbbbb"> </span>defaultVariable<span style="color: #bbbbbb"></span>
+</code></pre></div>
 
-Console.WriteLine(Person.FirstName);
-</code></pre>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Person<span style="color: #bbbbbb"> </span>person<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">null</span>;<span style="color: #bbbbbb"></span>
+Person<span style="color: #bbbbbb"> </span>newPerson<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>person<span style="color: #bbbbbb"> </span>??<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>Person(<span style="color: #BB4444">&quot;Default&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #BB4444">&quot;Person&quot;</span>);<span style="color: #bbbbbb"></span>
+
+Console.WriteLine(Person.FirstName);<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
 <h2 id="constants-vs-readonly">Constants vs readonly</h2>
 <table>
 <thead>
@@ -603,17 +614,17 @@ Console.WriteLine(Person.FirstName);
 </tr>
 </tbody>
 </table>
-<pre><code class="language-C#">class Program
-{
-    public const string someText = &quot;This is text&quot;;
-    public static readonly string someOtherText = &quot;Other text&quot;;
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">Program</span><span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">const</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span>someText<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #BB4444">&quot;This is text&quot;</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">static</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">readonly</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span>someOtherText<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #BB4444">&quot;Other text&quot;</span>;<span style="color: #bbbbbb"></span>
 
-    static void Main(string[] args)
-    {
-        Console.WriteLine(someText);
-    }
-}
-</code></pre>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">static</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">Main</span>(<span style="color: #00BB00; font-weight: bold">string</span>[]<span style="color: #bbbbbb"> </span>args)<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>Console.WriteLine(someText);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
 
 
 
