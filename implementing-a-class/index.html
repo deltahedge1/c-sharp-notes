@@ -278,6 +278,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#2-equals" class="md-nav__link">
+    2. Equals
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -384,6 +391,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#2-equals" class="md-nav__link">
+    2. Equals
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -415,23 +429,23 @@
 <h2 id="pro-tips">Pro Tips</h2>
 <h3 id="1-tostring">1. ToString</h3>
 <p>In the <code>ToString</code> method you can get the class name using <code>this.GetType().Name</code></p>
-<p>```C sharp
-public override string ToString()
-{
-    return $"{this.GetType().Name()} {this.X} {this.Y}"
-}</p>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>### 2. Equals
-In the `Equals` method good to implement two things
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">override</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">ToString</span>()<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #BB4444">$&quot;{this.GetType().Name()} {this.X} {this.Y}&quot;</span><span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
 
-1. check if the other `object` is `null` or not the same object type
-2. check if the properties are the same
-
-```C#
-public override bool Equals(object obj)
-{
-    if (obj == null || obj != GetType()) return false;
-    return (this.X == obj.X) &amp;&amp; (this.Y == obj.Y);
-}
+<h3 id="2-equals">2. Equals</h3>
+<p>In the <code>Equals</code> method good to implement two things</p>
+<ol>
+<li>check if the other <code>object</code> is <code>null</code> or not the same object type</li>
+<li>check if the properties are the same</li>
+</ol>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">override</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">bool</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">Equals</span>(<span style="color: #00BB00; font-weight: bold">object</span><span style="color: #bbbbbb"> </span>obj)<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(obj<span style="color: #bbbbbb"> </span>==<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">null</span><span style="color: #bbbbbb"> </span>||<span style="color: #bbbbbb"> </span>obj<span style="color: #bbbbbb"> </span>!=<span style="color: #bbbbbb"> </span>GetType())<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">false</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>(<span style="color: #AA22FF; font-weight: bold">this</span>.X<span style="color: #bbbbbb"> </span>==<span style="color: #bbbbbb"> </span>obj.X)<span style="color: #bbbbbb"> </span>&amp;&amp;<span style="color: #bbbbbb"> </span>(<span style="color: #AA22FF; font-weight: bold">this</span>.Y<span style="color: #bbbbbb"> </span>==<span style="color: #bbbbbb"> </span>obj.Y);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
 </code></pre></div>
 
 <h2 id="code">Code</h2>
