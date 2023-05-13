@@ -13,7 +13,7 @@
     
     
       
-        <title>Naming Convention - C# Notes</title>
+        <title>Implementing a Class - C# Notes</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#naming-conventions" class="md-skip">
+        <a href="#implementing-a-class" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Naming Convention
+              Implementing a Class
             
           </span>
         </div>
@@ -198,59 +198,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Naming Convention
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../naming-conventions/" class="md-nav__link">
         Naming Convention
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-access-modifiers-work" class="md-nav__link">
-    How Access Modifiers Work
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -342,9 +294,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-access-modifiers-work" class="md-nav__link">
-    How Access Modifiers Work
+  <a href="#pro-tips" class="md-nav__link">
+    Pro Tips
   </a>
+  
+    <nav class="md-nav" aria-label="Pro Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tostring" class="md-nav__link">
+    1. ToString
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -370,84 +335,60 @@
                   
 
 
-<h1 id="naming-conventions">Naming Conventions</h1>
-<h2 id="how-access-modifiers-work">How Access Modifiers Work</h2>
-<table>
-<thead>
-<tr>
-<th>Naming Convention</th>
-<th>Example</th>
-<th>Case</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Classes</td>
-<td><code>Person</code>, <code>CustomerService</code>, <code>CarFactory</code></td>
-<td>PascalCase</td>
-</tr>
-<tr>
-<td>Interfaces</td>
-<td><code>IComparable</code>, <code>IDisposable</code>, <code>IEnumerable</code></td>
-<td>IPascalCase</td>
-</tr>
-<tr>
-<td>Local variables</td>
-<td><code>firstName</code>, <code>lastName</code>, <code>orderTotal</code></td>
-<td>camelCase</td>
-</tr>
-<tr>
-<td>Private fields</td>
-<td><code>_firstName</code> or <code>fastName</code></td>
-<td>starts with <code>_</code> camelCase or without <code>_</code></td>
-</tr>
-<tr>
-<td>Constants</td>
-<td><code>MAX_RETRY_ATTEMPTS</code>, <code>ERROR_CODE_FILE_NOT_FOUND</code></td>
-<td>UPPERCASE_WITH_UNDERSCORES</td>
-</tr>
-<tr>
-<td>Properties</td>
-<td><code>Name</code>, <code>Address</code>, <code>IsEnabled</code></td>
-<td>PascalCase (noun or noun phrase)</td>
-</tr>
-<tr>
-<td>Methods</td>
-<td><code>Save</code>, <code>Delete</code>, <code>CalculateTotalCost</code></td>
-<td>PascalCase (verb or verb phrase)</td>
-</tr>
-</tbody>
-</table>
+<h1 id="implementing-a-class">Implementing a Class</h1>
+<h2 id="pro-tips">Pro Tips</h2>
+<h3 id="1-tostring">1. ToString</h3>
+<p>In the <code>ToString</code> method you can get the class name using <code>this.GetType().Name</code></p>
+<p>```C sharp
+public override string ToString()
+{
+    return $"{this.GetType().Name()} {this.X} {this.Y}"
+}</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>### 2. Equals
+In the `Equals` method good to implement two things
+
+1. check if the other `object` is `null` or not the same object type
+2. check if the properties are the same
+
+```C#
+public override bool Equals(object obj)
+{
+    if (obj == null || obj != GetType()) return false;
+    return (this.X == obj.X) &amp;&amp; (this.Y == obj.Y);
+}
+</code></pre></div>
+
 <h2 id="code">Code</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008800; font-style: italic">// Interface name should start with I</span>
-<span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">interface</span><span style="color: #bbbbbb"> </span>IExampleInterface<span style="color: #bbbbbb"></span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">Person</span><span style="color: #bbbbbb"></span>
 {<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">DoSomething</span>();<span style="color: #bbbbbb"></span>
-}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span>Name<span style="color: #bbbbbb"> </span>{<span style="color: #AA22FF; font-weight: bold">get</span>;<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">set</span>;};<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>Age{<span style="color: #AA22FF; font-weight: bold">get</span>;<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">set</span>;};<span style="color: #bbbbbb"></span>
 
-<span style="color: #008800; font-style: italic">// Constant name should be all uppercase with underscores separating words</span>
-<span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">static</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">ExampleConstants</span><span style="color: #bbbbbb"></span>
-{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">const</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>MAX_COUNT<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">100</span>;<span style="color: #bbbbbb"></span>
-}<span style="color: #bbbbbb"></span>
-
-<span style="color: #008800; font-style: italic">// Class name should be in PascalCase</span>
-<span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">ExampleClass</span><span style="color: #bbbbbb"></span>
-{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// Private field name should start with an underscore and be in camelCase</span>
-<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">private</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span>_exampleField;<span style="color: #bbbbbb"></span>
-
-<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// Property name should be in PascalCase</span>
-<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span>ExampleProperty<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">get</span>;<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">set</span>;<span style="color: #bbbbbb"> </span>}<span style="color: #bbbbbb"></span>
-
-<span style="color: #bbbbbb">    </span><span style="color: #008800; font-style: italic">// Method name should be in PascalCase</span>
-<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">ExampleMethod</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">Person</span>(<span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span>name,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>age)<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Local variable name should be in camelCase</span>
-<span style="color: #bbbbbb">        </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>exampleVariable<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">this</span>.Name<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>name;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">this</span>.Age<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>age;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
 
-<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Constant should be referenced using all uppercase with underscores separating words</span>
-<span style="color: #bbbbbb">        </span>Console.WriteLine(<span style="color: #BB4444">$&quot;The maximum count is {ExampleConstants.MAX_COUNT}&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">override</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">ToString</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #BB4444">$&quot;class: {this.GetType().Name} name: {this.name} age: {this.name}&quot;</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">override</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">bool</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">Equal</span>(<span style="color: #00BB00; font-weight: bold">object</span><span style="color: #bbbbbb"> </span>Obj)<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">if</span>(obj<span style="color: #bbbbbb"> </span>==<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">null</span><span style="color: #bbbbbb"> </span>||<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">this</span>.GetType()<span style="color: #bbbbbb"> </span>!=<span style="color: #bbbbbb"> </span>obj.GetType())<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">            </span><span style="color: #AA22FF; font-weight: bold">return</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">false</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">        </span>Person<span style="color: #bbbbbb"> </span>p<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>(Person)<span style="color: #bbbbbb"> </span>obj;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>(<span style="color: #AA22FF; font-weight: bold">this</span>.Name<span style="color: #bbbbbb"> </span>==<span style="color: #bbbbbb"> </span>p.Name)<span style="color: #bbbbbb"> </span>&amp;&amp;<span style="color: #bbbbbb"> </span>(<span style="color: #AA22FF; font-weight: bold">this</span>.Age<span style="color: #bbbbbb"> </span>==<span style="color: #bbbbbb"> </span>p.Age);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">override</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">GetHashCode</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>(Name,<span style="color: #bbbbbb"> </span>Age).GetHasCode();<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
 }<span style="color: #bbbbbb"></span>
 </code></pre></div>
@@ -466,42 +407,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Home
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../access-modifiers/" class="md-footer__link md-footer__link--next" aria-label="Next: Access Modifiers" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Access Modifiers
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
