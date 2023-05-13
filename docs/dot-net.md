@@ -49,3 +49,9 @@ dotnet list package --outdated
 ```terminal
 dotnet list package --outdated --include-prerelease
 ```
+
+## Add a reference
+
+```terminal
+dotnet add reference path/to/MyLibrary.dll
+```

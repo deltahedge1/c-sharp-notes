@@ -2,7 +2,7 @@
 
 Interfaces in C# are used to define a set of methods, properties, and events that a class can implement. The following steps show how to use interfaces in C#:
 
-# Define an Interface
+## Define an Interface
 
 1. Define an interface: To define an interface in C#, use the `interface` keyword followed by the interface name and a set of members. For example:
 

@@ -1,7 +1,8 @@
 site_name: C# Notes
 nav:
   - Home: index.md
-  - Access-Modifiers: access-modifiers.md
+  - Naming Convention: naming-conventions.md
+  - Access Modifiers: access-modifiers.md
   - Files: files.md
   - Interface: interface.md
   - .Net CLI: dot-net.md
@@ -10,6 +11,15 @@ theme:
   palette:
     primary: "purple"
     accent: "orange"
-  font:
-    text: "Roboto"
-    code: "Roboto Mono"
+markdown_extensions:
+  - codehilite:
+      guess_lang: false
+      pygments_style: "emacs"
+      use_pygments: true
+      lang_guess: false
+      css_class: "highlight"
+      noclasses: true
+      hl_lines: ''
+      linenums: false
+      langs:
+        - csharp
