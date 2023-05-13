@@ -1,6 +1,6 @@
 # Naming Conventions
 
-## How Access Modifiers Work
+## What naming convention to use
 
 | Naming Convention | Example | Case |
 | --- | --- | --- |

@@ -3,6 +3,7 @@ nav:
   - Home: index.md
   - Naming Convention: naming-conventions.md
   - Access Modifiers: access-modifiers.md
+  - Implementing a Class: implementing-a-class.md
   - Files: files.md
   - Interface: interface.md
   - .Net CLI: dot-net.md

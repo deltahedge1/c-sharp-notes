@@ -5,7 +5,7 @@
 ### 1. ToString
 In the `ToString` method you can get the class name using `this.GetType().Name`
 
-```C sharp
+```C#
 public override string ToString()
 {
     return $"{this.GetType().Name()} {this.X} {this.Y}"
