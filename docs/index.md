@@ -33,6 +33,11 @@ foreach (int i in myList2)
 ```
 
 ## Arrays
+
+```C#
+dataType[] nameOfArray = new dataType[arraySize];
+```
+
 ```C#
 int[] myArray = new int[10]; // 10 is the size of the array
 myArray[0] = 3;
