@@ -344,15 +344,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#project-installation" class="md-nav__link">
+    Project installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-installation" class="md-nav__link">
+    Global installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-packages" class="md-nav__link">
     List packages
   </a>
+  
+    <nav class="md-nav" aria-label="List packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-packages" class="md-nav__link">
+    Project packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-tools" class="md-nav__link">
+    Global tools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#add-a-reference" class="md-nav__link">
     Add a reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-nuget-package" class="md-nav__link">
+    Creating a nuget package
   </a>
   
 </li>
@@ -427,15 +468,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#project-installation" class="md-nav__link">
+    Project installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-installation" class="md-nav__link">
+    Global installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#list-packages" class="md-nav__link">
     List packages
   </a>
+  
+    <nav class="md-nav" aria-label="List packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-packages" class="md-nav__link">
+    Project packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-tools" class="md-nav__link">
+    Global tools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#add-a-reference" class="md-nav__link">
     Add a reference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-nuget-package" class="md-nav__link">
+    Creating a nuget package
   </a>
   
 </li>
@@ -475,6 +557,7 @@ dotnet new console -n myProj2 -f net6.0
 </code></pre></div>
 
 <h2 id="installing-packages">Installing packages</h2>
+<h2 id="project-installation">Project installation</h2>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add package &lt;package_name&gt; --version &lt;version&gt;
 </code></pre></div>
 
@@ -484,7 +567,12 @@ dotnet new console -n myProj2 -f net6.0
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add package Humanizer --prerelease
 </code></pre></div>
 
+<h2 id="global-installation">Global installation</h2>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add --global &lt;reference&gt;
+</code></pre></div>
+
 <h2 id="list-packages">List packages</h2>
+<h3 id="project-packages">Project packages</h3>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet list package
 </code></pre></div>
 
@@ -494,8 +582,18 @@ dotnet new console -n myProj2 -f net6.0
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet list package --outdated --include-prerelease
 </code></pre></div>
 
+<h3 id="global-tools">Global tools</h3>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet tool list --global
+</code></pre></div>
+
 <h2 id="add-a-reference">Add a reference</h2>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add reference path/to/MyLibrary.dll
+</code></pre></div>
+
+<h2 id="creating-a-nuget-package">Creating a nuget package</h2>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet build
+dotnet pack --configuration Relase // will package it to bin/Release/packagename.version.nupkg
+dotnet nuget push &lt;bin/Release/packagename.version.nupkg&gt; --source https://api.nuget.org/v3/index.json --api-key &lt;api_key&gt;
 </code></pre></div>
 
 
