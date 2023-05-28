@@ -251,6 +251,47 @@
     Dictionary
   </a>
   
+    <nav class="md-nav" aria-label="Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instantiating" class="md-nav__link">
+    Instantiating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding" class="md-nav__link">
+    Adding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains" class="md-nav__link">
+    Contains
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    Remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -452,6 +493,47 @@
     Dictionary
   </a>
   
+    <nav class="md-nav" aria-label="Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instantiating" class="md-nav__link">
+    Instantiating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding" class="md-nav__link">
+    Adding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contains" class="md-nav__link">
+    Contains
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    Remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -551,6 +633,59 @@ Array.Sort(myOtherArray)<span style="color: #bbbbbb"> </span><span style="color:
 </code></pre></div>
 
 <h2 id="dictionary">Dictionary</h2>
+<h3 id="instantiating">Instantiating</h3>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Dictionary&lt;<span style="color: #00BB00; font-weight: bold">string</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;<span style="color: #bbbbbb"> </span>Students<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>Dictionary&lt;<span style="color: #00BB00; font-weight: bold">string</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;();<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
+<h3 id="adding">Adding</h3>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Students.Add(<span style="color: #BB4444">&quot;Ish&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">1</span>);<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
+<h3 id="contains">Contains</h3>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">if</span>(Students.Contains(<span style="color: #BB4444">&quot;Ish&quot;</span>))<span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Console.WriteLine(<span style="color: #BB4444">$&quot;students dict contains Ish and value is {Students[&quot;</span>Ish<span style="color: #BB4444">&quot;]}&quot;</span>)<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
+<h3 id="remove">Remove</h3>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Students.Remove(keyToRemove);<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
+<h3 id="examples">Examples</h3>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">using</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF; font-weight: bold">System</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #AA22FF; font-weight: bold">using</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF; font-weight: bold">System.Collections.Generic</span>;<span style="color: #bbbbbb"></span>
+
+<span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">Program</span><span style="color: #bbbbbb"></span>
+{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">static</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">Main</span>()<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>Dictionary&lt;<span style="color: #00BB00; font-weight: bold">int</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span>&gt;<span style="color: #bbbbbb"> </span>students<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>Dictionary&lt;<span style="color: #00BB00; font-weight: bold">int</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span>&gt;();<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>students.Add(<span style="color: #666666">1</span>,<span style="color: #bbbbbb"> </span><span style="color: #BB4444">&quot;John&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>students.Add(<span style="color: #666666">2</span>,<span style="color: #bbbbbb"> </span><span style="color: #BB4444">&quot;Emily&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>students.Add(<span style="color: #666666">3</span>,<span style="color: #bbbbbb"> </span><span style="color: #BB4444">&quot;Michael&quot;</span>);<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Remove a specific key-value pair from the dictionary</span>
+<span style="color: #bbbbbb">        </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>keyToRemove<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #666666">2</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(students.ContainsKey(keyToRemove))<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">            </span>students.Remove(keyToRemove);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">            </span>Console.WriteLine(<span style="color: #BB4444">$&quot;Key {keyToRemove} removed from the dictionary.&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">else</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">            </span>Console.WriteLine(<span style="color: #BB4444">$&quot;Key {keyToRemove} does not exist in the dictionary.&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// Iterate over the dictionary to verify the removal</span>
+<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">foreach</span><span style="color: #bbbbbb"> </span>(KeyValuePair&lt;<span style="color: #00BB00; font-weight: bold">int</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">string</span>&gt;<span style="color: #bbbbbb"> </span>student<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">in</span><span style="color: #bbbbbb"> </span>students)<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">            </span>Console.WriteLine(<span style="color: #BB4444">$&quot;ID: {student.Key}, Name: {student.Value}&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Dictionary&lt;<span style="color: #00BB00; font-weight: bold">string</span>,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;<span style="color: #bbbbbb"> </span>scores<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>Dictionary&lt;String,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span>&gt;();<span style="color: #bbbbbb"></span>
 scores.Add(<span style="color: #BB4444">&quot;Ish&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">90</span>);<span style="color: #bbbbbb"></span>
 scores.Add(<span style="color: #BB4444">&quot;Jane&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">95</span>);<span style="color: #bbbbbb"></span>

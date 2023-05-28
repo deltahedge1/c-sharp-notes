@@ -13,7 +13,7 @@
     
     
       
-        <title>.Net CLI - C# Notes</title>
+        <title>Making a nuget package - C# Notes</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-cli" class="md-skip">
+        <a href="#making-a-nuget-package" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              .Net CLI
+              Making a nuget package
             
           </span>
         </div>
@@ -273,149 +273,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          .Net CLI
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dot-net/" class="md-nav__link">
         .Net CLI
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#making-an-example-project" class="md-nav__link">
-    Making an example project
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-net-sdks" class="md-nav__link">
-    List .Net SDKs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-console-app" class="md-nav__link">
-    Creating a new console app
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-a-cs-gitignore" class="md-nav__link">
-    Adding a CS gitignore
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-the-app" class="md-nav__link">
-    Run the app
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-are-packages-listed" class="md-nav__link">
-    Where are packages listed
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-packages" class="md-nav__link">
-    Installing packages
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-installation" class="md-nav__link">
-    Project installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-installation" class="md-nav__link">
-    Global installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-packages" class="md-nav__link">
-    List packages
-  </a>
-  
-    <nav class="md-nav" aria-label="List packages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#project-packages" class="md-nav__link">
-    Project packages
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#global-tools" class="md-nav__link">
-    Global tools
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-a-reference" class="md-nav__link">
-    Add a reference
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-nuget-package" class="md-nav__link">
-    Creating a nuget package
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -447,105 +309,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#making-an-example-project" class="md-nav__link">
-    Making an example project
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-net-sdks" class="md-nav__link">
-    List .Net SDKs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-console-app" class="md-nav__link">
-    Creating a new console app
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-a-cs-gitignore" class="md-nav__link">
-    Adding a CS gitignore
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-the-app" class="md-nav__link">
-    Run the app
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-are-packages-listed" class="md-nav__link">
-    Where are packages listed
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-packages" class="md-nav__link">
-    Installing packages
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-installation" class="md-nav__link">
-    Project installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-installation" class="md-nav__link">
-    Global installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#list-packages" class="md-nav__link">
-    List packages
-  </a>
-  
-    <nav class="md-nav" aria-label="List packages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#project-packages" class="md-nav__link">
-    Project packages
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#global-tools" class="md-nav__link">
-    Global tools
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-a-reference" class="md-nav__link">
-    Add a reference
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-nuget-package" class="md-nav__link">
-    Creating a nuget package
+  <a href="#useful-links" class="md-nav__link">
+    Useful Links
   </a>
   
 </li>
@@ -565,75 +330,63 @@
                   
 
 
-<h1 id="net-cli">.Net CLI</h1>
-<p><a href="https://learn.microsoft.com/en-us/training/modules/dotnet-dependencies/3-exercise-dependency">tutorial</a></p>
-<h2 id="making-an-example-project">Making an example project</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet new console -o ConsoleNameApp
-cd ConsoleNameApp
-dotnet new gitignore //add a gitignore
-dotnet new class -o ClassName //add a class file
+<h1 id="making-a-nuget-package">Making a nuget package</h1>
+<p>step 1. Make and build a class file</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet new class NugetPackageName
+dotnet new gitignore
 </code></pre></div>
 
-<h2 id="list-net-sdks">List .Net SDKs</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet --list-sdks
+<p>step 2. Modify the .csproj file</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Project</span> <span style="color: #BB4444">Sdk=&quot;Microsoft.NET.Sdk&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+
+  <span style="color: #008000; font-weight: bold">&lt;PropertyGroup&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;TargetFramework&gt;</span>net7.0<span style="color: #008000; font-weight: bold">&lt;/TargetFramework&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;ImplicitUsings&gt;</span>enable<span style="color: #008000; font-weight: bold">&lt;/ImplicitUsings&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;Nullable&gt;</span>enable<span style="color: #008000; font-weight: bold">&lt;/Nullable&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;PackageId&gt;</span>{this should be unique}<span style="color: #008000; font-weight: bold">&lt;/PackageId&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;Version&gt;</span>1.0.4<span style="color: #008000; font-weight: bold">&lt;/Version&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;Authors&gt;</span>Ish Hassan<span style="color: #008000; font-weight: bold">&lt;/Authors&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;Company&gt;</span>deltahedge1<span style="color: #008000; font-weight: bold">&lt;/Company&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;Product&gt;</span>AppLogger<span style="color: #008000; font-weight: bold">&lt;/Product&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;Description&gt;</span>This is a test package that has a logger<span style="color: #008000; font-weight: bold">&lt;/Description&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;PackageReadmeFile&gt;</span>README.md<span style="color: #008000; font-weight: bold">&lt;/PackageReadmeFile&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;PackageLicenseFile&gt;</span>LICENSE<span style="color: #008000; font-weight: bold">&lt;/PackageLicenseFile&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;PackageTags&gt;</span>Tag1 Tag_2<span style="color: #008000; font-weight: bold">&lt;/PackageTags&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;PackageReleaseNotes&gt;</span>
+      Release notes for version 1.0.0:
+      - Added new feature A.
+      - Fixed issue B.
+      - Improved performance.
+    <span style="color: #008000; font-weight: bold">&lt;/PackageReleaseNotes&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;/PropertyGroup&gt;</span>
+
+  <span style="color: #008000; font-weight: bold">&lt;ItemGroup&gt;</span>
+    <span style="color: #008800; font-style: italic">&lt;!-- Include README file in the package --&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;None</span> <span style="color: #BB4444">Include=&quot;README.md&quot;</span> <span style="color: #BB4444">Pack=&quot;true&quot;</span> <span style="color: #BB4444">PackagePath=&quot;&quot;</span> <span style="color: #BB4444">CopyToOutputDirectory=&quot;Always&quot;</span> <span style="color: #008000; font-weight: bold">/&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;None</span> <span style="color: #BB4444">Include=&quot;LICENSE.txt&quot;</span> <span style="color: #BB4444">Pack=&quot;true&quot;</span> <span style="color: #BB4444">PackagePath=&quot;&quot;</span> <span style="color: #BB4444">CopyToOutputDirectory=&quot;Always&quot;</span> <span style="color: #008000; font-weight: bold">/&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;/ItemGroup&gt;</span>
+
+<span style="color: #008000; font-weight: bold">&lt;/Project&gt;</span>
 </code></pre></div>
 
-<h2 id="creating-a-new-console-app">Creating a new console app</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet new console -h //help 
-dotnet new console -n myProj2 -f net6.0
-</code></pre></div>
-
-<h2 id="adding-a-cs-gitignore">Adding a CS gitignore</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet new gitignore
-</code></pre></div>
-
-<h2 id="run-the-app">Run the app</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet run
-</code></pre></div>
-
-<h2 id="where-are-packages-listed">Where are packages listed</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet list packages
-</code></pre></div>
-
-<h2 id="installing-packages">Installing packages</h2>
-<h2 id="project-installation">Project installation</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add package &lt;package_name&gt; --version &lt;version&gt;
-</code></pre></div>
-
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add package Humanizer --version 2.7.9
-</code></pre></div>
-
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add package Humanizer --prerelease
-</code></pre></div>
-
-<h2 id="global-installation">Global installation</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add --global &lt;reference&gt;
-</code></pre></div>
-
-<h2 id="list-packages">List packages</h2>
-<h3 id="project-packages">Project packages</h3>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet list package
-</code></pre></div>
-
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet list package --outdated
-</code></pre></div>
-
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet list package --outdated --include-prerelease
-</code></pre></div>
-
-<h3 id="global-tools">Global tools</h3>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet tool list --global
-</code></pre></div>
-
-<h2 id="add-a-reference">Add a reference</h2>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet add reference path/to/MyLibrary.dll
-</code></pre></div>
-
-<h2 id="creating-a-nuget-package">Creating a nuget package</h2>
+<p>step 3. Build and pack the package</p>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet build
 dotnet pack --configuration Release // will package it to bin/Release/packagename.version.nupkg
-dotnet nuget push &lt;bin/Release/packagename.version.nupkg&gt; --source https://api.nuget.org/v3/index.json --api-key &lt;api_key&gt;
 </code></pre></div>
+
+<p>step 4. Release the package</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>dotnet nuget push &lt;bin/Release/packagename.version.nupkg&gt; --source https://api.nuget.org/v3/index.json --api-key &lt;api_key&gt;
+</code></pre></div>
+
+<h2 id="useful-links">Useful Links</h2>
+<ul>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/nuget/">Microsoft Link</a></p>
+</li>
+<li>
+<p><a href="https://learn.microsoft.com/en-us/nuget/create-packages/package-authoring-best-practices">Best Practices</a></p>
+</li>
+</ul>
 
 
 
@@ -649,27 +402,6 @@ dotnet nuget push &lt;bin/Release/packagename.version.nupkg&gt; --source https:/
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../interface/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interface" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Interface
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
