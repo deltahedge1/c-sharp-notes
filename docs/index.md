@@ -48,6 +48,67 @@ Array.Sort(myOtherArray) // does it in place no need to assign
 
 ## Dictionary
 
+
+### Instantiating
+```C#
+Dictionary<string, int> Students = new Dictionary<string, int>();
+```
+
+### Adding
+```C#
+Students.Add("Ish", 1);
+```
+
+### Contains
+```C#
+if(Students.Contains("Ish"))
+{
+	Console.WriteLine($"students dict contains Ish and value is {Students["Ish"]}")
+}
+```
+
+### Remove
+```C#
+Students.Remove(keyToRemove);
+```
+
+### Examples
+
+```C#
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Dictionary<int, string> students = new Dictionary<int, string>();
+        students.Add(1, "John");
+        students.Add(2, "Emily");
+        students.Add(3, "Michael");
+
+        // Remove a specific key-value pair from the dictionary
+        int keyToRemove = 2;
+        if (students.ContainsKey(keyToRemove))
+        {
+            students.Remove(keyToRemove);
+            Console.WriteLine($"Key {keyToRemove} removed from the dictionary.");
+        }
+        else
+        {
+            Console.WriteLine($"Key {keyToRemove} does not exist in the dictionary.");
+        }
+
+        // Iterate over the dictionary to verify the removal
+        foreach (KeyValuePair<int, string> student in students)
+        {
+            Console.WriteLine($"ID: {student.Key}, Name: {student.Value}");
+        }
+    }
+}
+
+```
+
 ```C#
 Dictionary<string, int> scores = new Dictionary<String, int>();
 scores.Add("Ish", 90);
