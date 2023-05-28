@@ -3,6 +3,14 @@
 [tutorial](https://learn.microsoft.com/en-us/training/modules/dotnet-dependencies/3-exercise-dependency)
 
 
+## Making an example project
+
+```terminal
+dotnet new console -o ConsoleNameApp
+cd ConsoleNameApp
+dotnet new gitignore //add a gitignore
+dotnet new class -o ClassName //add a class file
+```
 ## List .Net SDKs
 ```terminal
 dotnet --list-sdks
@@ -10,8 +18,13 @@ dotnet --list-sdks
 
 ## Creating a new console app
 ```terminal
-dotnet new console -h #help 
+dotnet new console -h //help 
 dotnet new console -n myProj2 -f net6.0
+```
+
+## Adding a CS gitignore
+```
+dotnet new gitignore
 ```
 
 ## Run the app 
@@ -76,6 +89,6 @@ dotnet add reference path/to/MyLibrary.dll
 
 ```terminal
 dotnet build
-dotnet pack --configuration Relase // will package it to bin/Release/packagename.version.nupkg
+dotnet pack --configuration Release // will package it to bin/Release/packagename.version.nupkg
 dotnet nuget push <bin/Release/packagename.version.nupkg> --source https://api.nuget.org/v3/index.json --api-key <api_key>
 ```
