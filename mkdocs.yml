@@ -7,6 +7,7 @@ nav:
   - Files: files.md
   - Interface: interface.md
   - .Net CLI: dot-net.md
+  - Useful Links: useful-links.md
 theme:
   name: material
   palette:
