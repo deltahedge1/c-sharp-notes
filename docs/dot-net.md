@@ -18,16 +18,19 @@ dotnet --list-sdks
 
 ## Creating a new console app
 ```terminal
-dotnet new console -h //help 
+dotnet new console -h //help
 dotnet new console -n myProj2 -f net6.0
 ```
 
+```terminal
+dotnet new console --framework net6.0 --use-program-main
+```
 ## Adding a CS gitignore
 ```
 dotnet new gitignore
 ```
 
-## Run the app 
+## Run the app
 ```terminal
 dotnet run
 ```
