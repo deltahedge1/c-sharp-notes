@@ -13,7 +13,7 @@
     
     
       
-        <title>Interface - C# Notes</title>
+        <title>Useful Links - C# Notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interface" class="md-skip">
+        <a href="#useful-links" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interface
+              Useful Links
             
           </span>
         </div>
@@ -256,66 +256,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Interface
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../interface/" class="md-nav__link">
         Interface
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#define-an-interface" class="md-nav__link">
-    Define an Interface
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implement-an-interface" class="md-nav__link">
-    Implement an Interface
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-the-interface" class="md-nav__link">
-    Use the interface
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -341,11 +286,21 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../useful-links/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Useful Links
       </a>
+      
     </li>
   
 
@@ -370,35 +325,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#define-an-interface" class="md-nav__link">
-    Define an Interface
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implement-an-interface" class="md-nav__link">
-    Implement an Interface
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-the-interface" class="md-nav__link">
-    Use the interface
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -411,53 +337,11 @@
                 
 
 
-<h1 id="interface">Interface</h1>
-<p>Interfaces in C# are used to define a set of methods, properties, and events that a class can implement. The following steps show how to use interfaces in C#:</p>
-<h2 id="define-an-interface">Define an Interface</h2>
+<h1 id="useful-links">Useful links</h1>
 <ol>
-<li>Define an interface: To define an interface in C#, use the <code>interface</code> keyword followed by the interface name and a set of members. For example:</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/">.Net fundamentals documentation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">C# tutorials MS learn</a></li>
 </ol>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">interface</span><span style="color: #bbbbbb"> </span>IMyInterface<span style="color: #bbbbbb"></span>
-{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">DoSomething</span>();<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">CalculateSomething</span>(<span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>x,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>y);<span style="color: #bbbbbb"></span>
-}<span style="color: #bbbbbb"></span>
-</code></pre></div>
-
-<p>This interface declares two members: <code>DoSomething</code>, which has no parameters and returns no value, and <code>CalculateSomething</code>, which takes two <code>int</code> parameters and returns an <code>int</code> result.</p>
-<h2 id="implement-an-interface">Implement an Interface</h2>
-<ol>
-<li>Implement the interface: To implement an interface in a class, use the <code>: &lt;interface&gt;</code> syntax after the class declaration. For example:</li>
-</ol>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">class</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MyClass</span><span style="color: #bbbbbb"> </span>:<span style="color: #bbbbbb"> </span>IMyInterface<span style="color: #bbbbbb"></span>
-{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">void</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">DoSomething</span>()<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// implementation code goes here</span>
-<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
-
-<span style="color: #bbbbbb">    </span><span style="color: #AA22FF; font-weight: bold">public</span><span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span><span style="color: #00A000">CalculateSomething</span>(<span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>x,<span style="color: #bbbbbb"> </span><span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>y)<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008800; font-style: italic">// implementation code goes here</span>
-<span style="color: #bbbbbb">        </span><span style="color: #AA22FF; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>x<span style="color: #bbbbbb"> </span>+<span style="color: #bbbbbb"> </span>y;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
-}<span style="color: #bbbbbb"></span>
-</code></pre></div>
-
-<p>This class implements the <code>IMyInterface</code> interface by providing implementations for both of its members.</p>
-<h2 id="use-the-interface">Use the interface</h2>
-<ol>
-<li>Use the interface: Once you have defined an interface and implemented it in a class, you can use the interface to interact with instances of that class. For example:</li>
-</ol>
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>IMyInterface<span style="color: #bbbbbb"> </span>myObject<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span><span style="color: #AA22FF; font-weight: bold">new</span><span style="color: #bbbbbb"> </span>MyClass();<span style="color: #bbbbbb"></span>
-myObject.DoSomething();<span style="color: #bbbbbb"></span>
-
-<span style="color: #00BB00; font-weight: bold">int</span><span style="color: #bbbbbb"> </span>result<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>myObject.CalculateSomething(<span style="color: #666666">3</span>,<span style="color: #bbbbbb"> </span><span style="color: #666666">4</span>);<span style="color: #bbbbbb"></span>
-Console.WriteLine(result);<span style="color: #bbbbbb"></span>
-</code></pre></div>
-
-<p>This code creates an instance of the <code>MyClass</code> class, which implements the <code>IMyInterface</code> interface. It then uses the <code>IMyInterface</code> variable <code>myObject</code> to call the <code>DoSomething</code> and <code>CalculateSomething</code> methods on the instance.</p>
-<p>By using interfaces in your code, you can write more flexible and reusable code that can work with a variety of different classes that implement the same interface.</p>
 
               
             </article>
@@ -473,7 +357,7 @@ Console.WriteLine(result);<span style="color: #bbbbbb"></span>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../files/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Files" rel="prev">
+        <a href="../dot-net/" class="md-footer__link md-footer__link--prev" aria-label="Previous: .Net CLI" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -482,26 +366,11 @@ Console.WriteLine(result);<span style="color: #bbbbbb"></span>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Files
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../dot-net/" class="md-footer__link md-footer__link--next" aria-label="Next: .Net CLI" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
               .Net CLI
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
