@@ -283,6 +283,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getting-the-current-directory" class="md-nav__link">
+    Getting the current directory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-assembly-location" class="md-nav__link">
+    Getting the assembly location
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-the-path" class="md-nav__link">
+    Resolving the Path
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -369,6 +390,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getting-the-current-directory" class="md-nav__link">
+    Getting the current directory
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-assembly-location" class="md-nav__link">
+    Getting the assembly location
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-the-path" class="md-nav__link">
+    Resolving the Path
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -387,6 +429,20 @@
 <h2 id="write-files">Write Files</h2>
 <div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #00BB00; font-weight: bold">string</span>[]<span style="color: #bbbbbb"> </span>lines<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>{<span style="color: #BB4444">&quot;first line&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #BB4444">&quot;second line&quot;</span>,<span style="color: #bbbbbb"> </span><span style="color: #BB4444">&quot;third line&quot;</span>};<span style="color: #bbbbbb"></span>
 File.WriteAllLines(<span style="color: #BB4444">&quot;myFirstFile.txt&quot;</span>,<span style="color: #bbbbbb"> </span>lines);<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
+<h2 id="getting-the-current-directory">Getting the current directory</h2>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Directory.GetCurrentDirectory();<span style="color: #bbbbbb"></span>
+</code></pre></div>
+
+<h2 id="getting-the-assembly-location">Getting the assembly location</h2>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #AA22FF; font-weight: bold">typeof</span>(program).Assembly.Location<span style="color: #bbbbbb"></span>
+<span style="color: #008800; font-style: italic">//C:\Users\ihassan1\OneDrive - KPMG\Documents\AAA\csharpprojects\WordTemplating\bin\Debug\net6.0\WordTemplating.dll</span>
+</code></pre></div>
+
+<h2 id="resolving-the-path">Resolving the Path</h2>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #00BB00; font-weight: bold">string</span><span style="color: #bbbbbb"> </span>basePath<span style="color: #bbbbbb"> </span>=<span style="color: #bbbbbb"> </span>Path.GetDirectoryName(<span style="color: #AA22FF; font-weight: bold">typeof</span>(Program).Assembly.Location)<span style="color: #bbbbbb"> </span>+<span style="color: #bbbbbb"> </span><span style="color: #BB4444">@&quot;/../..&quot;</span>;<span style="color: #bbbbbb"></span>
+Console.WriteLine(Path.GetFullPath(basePath));<span style="color: #bbbbbb"></span>
 </code></pre></div>
 
               
